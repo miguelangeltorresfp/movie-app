@@ -7,6 +7,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "publishConfig": {
+    "access": "restricted"
+  },
   "lint-staged": {
     "packages/**/*.{js,ts,jsx,tsx}": [
       "eslint --color --fix"
