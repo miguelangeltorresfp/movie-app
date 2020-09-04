@@ -1,0 +1,13 @@
+{
+  "name": "movie-app",
+  "private": true,
+  "repository": "https://github.com/miguelangeltorresfp/movie-app.git",
+  "author": "Miguel Angel Torres FP <miguelangeltorresfp@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
