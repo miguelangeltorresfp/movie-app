@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Theme } from '../../theme/theme';
+import { Theme } from '../theme/theme';
 
 export const ToggleLeftText = styled.span`
 	font-family: ${(props: { theme: Theme }) => props.theme.font.family};

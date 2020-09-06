@@ -9,7 +9,7 @@
 		"allowJs": false,
 		"jsx": "react",
 		"moduleResolution": "node",
-		"rootDirs": ["src"],
+		"rootDirs": ["src", "theme"],
 		"baseUrl": "src",
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitReturns": true,

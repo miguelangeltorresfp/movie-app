@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import Container from 'react-bootstrap/Container';
 import MovieCreditRow from '../MovieCreditRow';
-import { Theme } from '../../../theme/theme';
+import { Theme } from '../../theme/theme';
 
 const Background = styled(Container)`
 	padding: 2rem;

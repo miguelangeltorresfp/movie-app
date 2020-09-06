@@ -8,15 +8,18 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "js:build": "cross-env NODE_ENV=production tsc -p tsconfig.json",
-    "build-js:prod": "rimraf ./lib && yarn js:build && cross-env NODE_ENV=production babel src --out-dir lib --copy-files --source-maps --extensions \".ts,.tsx,.js,.jsx,.mjs\"",
-    "js:watch": "rimraf ./lib && cross-env NODE_ENV=development concurrently -k -n \"typescript,babel\" -c \"blue.bold,yellow.bold\"  \"tsc -p tsconfig.json --watch\" \"babel src --out-dir lib --source-maps --extensions \".ts,.tsx,.js,.jsx,.mjs\" --copy-files --watch --verbose\"",
+    "type-check": "tsc --noEmit -p tsconfig.json",
+    "type-check:watch": "yarn run type-check -- --watch",
+    "build": "rimraf ./lib && cross-env NODE_ENV=production run-s compile:*",
+    "build:watch": "rimraf ./lib && cross-env NODE_ENV=development run-p \"compile:types --watch\" \"compile:source --watch --verbose\"",
+    "compile:types": "tsc --emitDeclarationOnly -p tsconfig.json",
+    "compile:source": "babel src --out-dir lib --extensions \".ts,.tsx,.js,.jsx,.mjs\" --copy-files --source-maps",
     "storybook": "start-storybook -p 8080",
     "test": "jest",
+    "test:staged": "jest --findRelatedTests",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
     "prebuild:storybook": "rimraf .jest-test-results.json && yarn test:generate-output",
-    "build:storybook": "build-storybook -c .storybook -o dist/ --quiet",
-    "deploy:storybook": "../../deployApp.sh dist/ awesome-movie-app-components E3OVTB81UR1OB7"
+    "build:storybook": "build-storybook -c .storybook -o dist/ --quiet"
   },
   "dependencies": {
     "@types/enzyme": "^3.10.5",
@@ -44,7 +47,6 @@
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.0",
-    "concurrently": "^5.2.0",
     "core-js": "^3.6.5",
     "cross-env": "^7.0.2",
     "enzyme": "^3.11.0",
@@ -67,14 +69,15 @@
     "typescript": "^3.9.3"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "bootstrap": "^4.5.0",
     "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-autosuggest": "^10.0.2",
     "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
     "react-player": "^2.1.1",
     "react-switch": "^5.0.1",
     "styled-components": "^5.1.0",
-    "react-autosuggest": "^10.0.2"
+    "npm-run-all": "^4.1.5"
   }
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import Search, { MovieSuggestion } from '../Search';
-import { Theme } from '../../../theme/theme';
+import { Theme } from '../../theme/theme';
 
 const Background = styled.div`
 	padding: 2rem;

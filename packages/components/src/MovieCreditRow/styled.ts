@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
-import { Theme } from '../../theme/theme';
+import { Theme } from '../theme/theme';
 
 export const CreditRow = styled(Row)`
 	padding: 1rem;

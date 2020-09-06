@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import CardDeck from 'react-bootstrap/CardDeck';
 import MovieCard from '../MovieCard';
-import { Theme } from '../../../theme/theme';
+import { Theme } from '../../theme/theme';
 
 const Background = styled.div`
 	padding: 2rem;

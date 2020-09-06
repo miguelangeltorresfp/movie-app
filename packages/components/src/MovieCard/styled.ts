@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
-import { Theme } from '../../theme/theme';
+import { Theme } from '../theme/theme';
 
 export const StyledCard = styled(Card)`
 	flex-basis: 150px !important;

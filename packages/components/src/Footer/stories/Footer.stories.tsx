@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Footer from '../Footer';
-import { Theme } from '../../../theme/theme';
+import { Theme } from '../../theme/theme';
 
 const Background = styled.div`
 	padding: 2rem;

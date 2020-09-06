@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MovieCarousel from '../MovieCarousel';
-import { Theme } from '../../../theme/theme';
+import { Theme } from '../../theme/theme';
 
 const BackgroundImage = styled.div`
 	padding: 2rem;

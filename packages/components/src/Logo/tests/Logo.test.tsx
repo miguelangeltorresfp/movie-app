@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
-import lightTheme from '../../../theme/light';
+import lightTheme from '../../theme/light';
 import Logo from '../Logo';
 
 describe('Button', () => {

@@ -3,7 +3,7 @@ import isNil from 'lodash/isNil';
 import Autosuggest from 'react-autosuggest';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
-import { Theme } from '../../theme/theme';
+import { Theme } from '../theme/theme';
 import SearchResultRow from '../SearchResultRow/SearchResultRow';
 import NoResultsFoundRow from '../SearchResultRow/NoResultsFoundRow';
 import { ResultRow } from './styled';

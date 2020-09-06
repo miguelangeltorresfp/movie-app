@@ -3,9 +3,9 @@ import styled, { ThemeProvider } from 'styled-components';
 import { text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import Toggle from '../Toggle';
-import { Theme } from '../../../theme/theme';
-import LightTheme from '../../../theme/light';
-import DarkTheme from '../../../theme/dark';
+import { Theme } from '../../theme/theme';
+import LightTheme from '../../theme/light';
+import DarkTheme from '../../theme/dark';
 
 const Background = styled.div`
 	padding: 2rem;

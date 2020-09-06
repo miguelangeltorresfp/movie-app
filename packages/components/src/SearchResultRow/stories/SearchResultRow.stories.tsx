@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { text } from '@storybook/addon-knobs';
 import SearchResultRow from '../SearchResultRow';
 import NoResultsFound from '../NoResultsFoundRow';
-import { Theme } from '../../../theme/theme';
+import { Theme } from '../../theme/theme';
 
 const Background = styled.div`
 	padding: 2rem;
